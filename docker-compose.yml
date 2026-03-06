@@ -9,7 +9,16 @@ services:
       CLAUDE_AI_SESSION_KEY: ${CLAUDE_AI_SESSION_KEY:-}
       CLAUDE_WEB_SESSION_KEY: ${CLAUDE_WEB_SESSION_KEY:-}
       CLAUDE_WEB_COOKIE: ${CLAUDE_WEB_COOKIE:-}
+      PATH: ${OPENCLAW_PATH}
+      XDG_CONFIG_HOME: ${XDG_CONFIG_HOME}
+      GOG_KEYRING_PASSWORD: ${GOG_KEYRING_PASSWORD}
+      GOOGLE_APPLICATION_CREDENTIALS: ${GOOGLE_APPLICATION_CREDENTIALS}
+      GOOGLE_CLOUD_PROJECT: ${GOOGLE_CLOUD_PROJECT}
+      GOOGLE_CLOUD_LOCATION: ${GOOGLE_CLOUD_LOCATION}
+      PLAYWRIGHT_BROWSERS_PATH: ${PLAYWRIGHT_BROWSERS_PATH}
     volumes:
+      - openclaw_home:/home/node
+      - openclaw_matrix:/app/extensions/matrix
       - ${OPENCLAW_CONFIG_DIR}:/home/node/.openclaw
       - ${OPENCLAW_WORKSPACE_DIR}:/home/node/.openclaw/workspace
       ## Uncomment the lines below to enable sandbox isolation
@@ -65,7 +74,15 @@ services:
       CLAUDE_AI_SESSION_KEY: ${CLAUDE_AI_SESSION_KEY:-}
       CLAUDE_WEB_SESSION_KEY: ${CLAUDE_WEB_SESSION_KEY:-}
       CLAUDE_WEB_COOKIE: ${CLAUDE_WEB_COOKIE:-}
+      PATH: ${OPENCLAW_PATH}
+      XDG_CONFIG_HOME: ${XDG_CONFIG_HOME}
+      GOG_KEYRING_PASSWORD: ${GOG_KEYRING_PASSWORD}
+      GOOGLE_APPLICATION_CREDENTIALS: ${GOOGLE_APPLICATION_CREDENTIALS}
+      GOOGLE_CLOUD_PROJECT: ${GOOGLE_CLOUD_PROJECT}
+      GOOGLE_CLOUD_LOCATION: ${GOOGLE_CLOUD_LOCATION}
     volumes:
+      - openclaw_home:/home/node
+      - openclaw_matrix:/app/extensions/matrix
       - ${OPENCLAW_CONFIG_DIR}:/home/node/.openclaw
       - ${OPENCLAW_WORKSPACE_DIR}:/home/node/.openclaw/workspace
     stdin_open: true
@@ -74,3 +91,8 @@ services:
     entrypoint: ["node", "dist/index.js"]
     depends_on:
       - openclaw-gateway
+volumes:
+  openclaw_home:
+    external: true
+  openclaw_matrix:
+    external: true
