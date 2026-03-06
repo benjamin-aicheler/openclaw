@@ -16,6 +16,8 @@ services:
       GOOGLE_CLOUD_PROJECT: ${GOOGLE_CLOUD_PROJECT}
       GOOGLE_CLOUD_LOCATION: ${GOOGLE_CLOUD_LOCATION}
       PLAYWRIGHT_BROWSERS_PATH: ${PLAYWRIGHT_BROWSERS_PATH}
+      OPENCLAW_NO_RESPAWN: ${OPENCLAW_NO_RESPAWN}
+      AGENTMAIL_API_KEY: ${AGENTMAIL_API_KEY}
     volumes:
       - openclaw_home:/home/node
       - openclaw_matrix:/app/extensions/matrix
@@ -80,6 +82,8 @@ services:
       GOOGLE_APPLICATION_CREDENTIALS: ${GOOGLE_APPLICATION_CREDENTIALS}
       GOOGLE_CLOUD_PROJECT: ${GOOGLE_CLOUD_PROJECT}
       GOOGLE_CLOUD_LOCATION: ${GOOGLE_CLOUD_LOCATION}
+      OPENCLAW_NO_RESPAWN: ${OPENCLAW_NO_RESPAWN}
+      AGENTMAIL_API_KEY: ${AGENTMAIL_API_KEY}
     volumes:
       - openclaw_home:/home/node
       - openclaw_matrix:/app/extensions/matrix
