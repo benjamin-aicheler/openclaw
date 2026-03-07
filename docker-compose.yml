@@ -19,6 +19,7 @@ services:
       PLAYWRIGHT_BROWSERS_PATH: ${PLAYWRIGHT_BROWSERS_PATH}
       OPENCLAW_NO_RESPAWN: ${OPENCLAW_NO_RESPAWN}
       AGENTMAIL_API_KEY: ${AGENTMAIL_API_KEY}
+      NODE_COMPILE_CACHE: ${NODE_COMPILE_CACHE}
     volumes:
       - openclaw_home:/home/node
       - openclaw_matrix:/app/extensions/matrix
@@ -82,6 +83,7 @@ services:
       GOOGLE_CLOUD_LOCATION: ${GOOGLE_CLOUD_LOCATION}
       OPENCLAW_NO_RESPAWN: ${OPENCLAW_NO_RESPAWN}
       AGENTMAIL_API_KEY: ${AGENTMAIL_API_KEY}
+      NODE_COMPILE_CACHE: ${NODE_COMPILE_CACHE}
     volumes:
       - openclaw_home:/home/node
       - openclaw_matrix:/app/extensions/matrix
