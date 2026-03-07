@@ -21,6 +21,7 @@ services:
       AGENTMAIL_API_KEY: ${AGENTMAIL_API_KEY}
       NODE_COMPILE_CACHE: ${NODE_COMPILE_CACHE}
     volumes:
+      - openclaw_cache:/var/tmp/openclaw-compile-cache
       - openclaw_home:/home/node
       - openclaw_matrix:/app/extensions/matrix
       - ${OPENCLAW_CONFIG_DIR}:/home/node/.openclaw
@@ -85,6 +86,7 @@ services:
       AGENTMAIL_API_KEY: ${AGENTMAIL_API_KEY}
       NODE_COMPILE_CACHE: ${NODE_COMPILE_CACHE}
     volumes:
+      - openclaw_cache:/var/tmp/openclaw-compile-cache
       - openclaw_home:/home/node
       - openclaw_matrix:/app/extensions/matrix
       - ${OPENCLAW_CONFIG_DIR}:/home/node/.openclaw
