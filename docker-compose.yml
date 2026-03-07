@@ -99,6 +99,7 @@ services:
       - openclaw-gateway
 volumes:
   openclaw_home:
+  openclaw_cache:
     external: true
   openclaw_matrix:
     external: true
