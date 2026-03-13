@@ -21,6 +21,7 @@ services:
       OPENCLAW_NO_RESPAWN: ${OPENCLAW_NO_RESPAWN}
       AGENTMAIL_API_KEY: ${AGENTMAIL_API_KEY}
       NODE_COMPILE_CACHE: ${NODE_COMPILE_CACHE}
+      NODE_OPTIONS: --max-old-space-size=1536
     volumes:
       - openclaw_cache:/var/tmp/openclaw-compile-cache
       - openclaw_home:/home/node
@@ -87,6 +88,7 @@ services:
       OPENCLAW_NO_RESPAWN: ${OPENCLAW_NO_RESPAWN}
       AGENTMAIL_API_KEY: ${AGENTMAIL_API_KEY}
       NODE_COMPILE_CACHE: ${NODE_COMPILE_CACHE}
+      NODE_OPTIONS: --max-old-space-size=1536
     volumes:
       - openclaw_cache:/var/tmp/openclaw-compile-cache
       - openclaw_home:/home/node
