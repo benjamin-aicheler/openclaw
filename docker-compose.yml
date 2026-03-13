@@ -23,7 +23,6 @@ services:
       NODE_COMPILE_CACHE: ${NODE_COMPILE_CACHE}
       NODE_OPTIONS: --max-old-space-size=1536
     volumes:
-      - openclaw_cache:/var/tmp/openclaw-compile-cache
       - openclaw_home:/home/node
       - openclaw_matrix:/app/extensions/matrix
       - ${OPENCLAW_CONFIG_DIR}:/home/node/.openclaw
@@ -90,7 +89,6 @@ services:
       NODE_COMPILE_CACHE: ${NODE_COMPILE_CACHE}
       NODE_OPTIONS: --max-old-space-size=1536
     volumes:
-      - openclaw_cache:/var/tmp/openclaw-compile-cache
       - openclaw_home:/home/node
       - openclaw_matrix:/app/extensions/matrix
       - ${OPENCLAW_CONFIG_DIR}:/home/node/.openclaw
